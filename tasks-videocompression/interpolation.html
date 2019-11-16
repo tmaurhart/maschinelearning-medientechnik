@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="80" height="80"></canvas>
+    <script>
+
+    let A = [0, 0, 0];
+    let B = [255, 255, 255];
+    let C = [255, 0, 0];
+    let D = [0, 0, 255];
+
+let canvas = document.getElementById("canvas");
+    let context = canvas.getContext("2d");
+    // Define the image dimensions
+    let width = canvas.width;
+    let height = canvas.height;
+    // Create an ImageData object
+    let imageData = context.createImageData(width, height);
+    let data = imageData.data;
+
+    for (let row = 0; row < height; row++ ){
+        for (let col = 0; col < width; col++ ){
+            let index = (col + (row * width)) * 4;
+
+                let r = Math.floor((( 80 - col  ) * (80 - row) * A[0] + col * (80 - row) * B[0] + (80 - col ) * row * C[0] + col * row * D[0] +2*(80+80))/(80*80));
+                let g = Math.floor((( 80 - col  ) * (80 - row) * A[1] + col * (80 - row) * B[1] + (80 - col ) * row * C[1] + col * row * D[1] +2*(80+80))/(80*80));
+                let b = Math.floor((( 80 - col  ) * (80 - row) * A[2] + col * (80 - row) * B[2] + (80 - col ) * row * C[2] + col * row * D[2] +2*(80+80))/(80*80));
+                imageData.data[index] = r;     // Red
+                imageData.data[index+1] = g; // Green
+                imageData.data[index+2] = b;  // Blue
+                imageData.data[index+3] = 255;   // Alpha
+        }
+    }
+
+    context.putImageData(imageData, 0, 0);
+
+    </script>
+</body>
+</html>
