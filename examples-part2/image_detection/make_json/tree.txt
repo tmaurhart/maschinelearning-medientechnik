@@ -13,6 +13,10 @@
 ├── image_00112.jpg
 ├── image_0012.jpg
 ├── image_00122.jpg
+├── bild1_klein.jpg
+├── bild2_klein.jpg
+├── bild3_klein.jpg
+├── card.jpg
 └── image_0013.jpg
 
 0 directories, 15 files
