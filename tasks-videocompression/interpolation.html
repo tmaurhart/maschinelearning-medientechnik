@@ -7,13 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <canvas id="canvas" width="80" height="80"></canvas>
+    <canvas id="canvas" width="400" height="400"></canvas>
     <script>
 
     let A = [0, 0, 0];
     let B = [255, 255, 255];
     let C = [255, 0, 0];
-    let D = [0, 0, 255];
+    let D = [255, 255, 0];
 
 let canvas = document.getElementById("canvas");
     let context = canvas.getContext("2d");
@@ -28,9 +28,9 @@ let canvas = document.getElementById("canvas");
         for (let col = 0; col < width; col++ ){
             let index = (col + (row * width)) * 4;
 
-                let r = Math.floor((( 80 - col  ) * (80 - row) * A[0] + col * (80 - row) * B[0] + (80 - col ) * row * C[0] + col * row * D[0] +2*(80+80))/(80*80));
-                let g = Math.floor((( 80 - col  ) * (80 - row) * A[1] + col * (80 - row) * B[1] + (80 - col ) * row * C[1] + col * row * D[1] +2*(80+80))/(80*80));
-                let b = Math.floor((( 80 - col  ) * (80 - row) * A[2] + col * (80 - row) * B[2] + (80 - col ) * row * C[2] + col * row * D[2] +2*(80+80))/(80*80));
+                let r = Math.floor((( 400 - col  ) * (400 - row) * A[0] + col * (400 - row) * B[0] + (400 - col ) * row * C[0] + col * row * D[0] +2*(400+400))/(400*400));
+                let g = Math.floor((( 400 - col  ) * (400 - row) * A[1] + col * (400 - row) * B[1] + (400 - col ) * row * C[1] + col * row * D[1] +2*(400+400))/(400*400));
+                let b = Math.floor((( 400 - col  ) * (400 - row) * A[2] + col * (400 - row) * B[2] + (400 - col ) * row * C[2] + col * row * D[2] +2*(400+400))/(400*400));
                 imageData.data[index] = r;     // Red
                 imageData.data[index+1] = g; // Green
                 imageData.data[index+2] = b;  // Blue
