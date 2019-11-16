@@ -5,5 +5,5 @@
 <ul>
     <li>npm install</li>
     <li>npm run test</li>
-    <li>choose folder <i>example-part1</i> or <i>example-part2</i></li>
+    <li>choose <a href="example.html"><i>example.html</i></a></li>
 </ul>
