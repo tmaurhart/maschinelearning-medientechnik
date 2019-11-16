@@ -1,0 +1,22 @@
+{
+    "name": "maschinelearning-medientechnik",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "live-server --port=8083"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tmaurhart/maschinelearning-medientechnik.git"
+    },
+    "author": "Randolf Gunharth, Maurhart Thomas",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/tmaurhart/maschinelearning-medientechnik/issues"
+    },
+    "homepage": "https://github.com/tmaurhart/maschinelearning-medientechnik#readme",
+    "devDependencies": {
+        "live-server": "^1.2.1"
+    }
+}
